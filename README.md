@@ -34,7 +34,8 @@ El análisis se automatiza mediante el script `run_filogenia.sh`, con los siguie
 
 6. **Visualización**  
    El árbol se visualiza en FigTree.
-![macaco 2] (https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Female_Toque_macaque_with_baby_-_%28Harmony_of_Life%29.jpg/1920px-Female_Toque_macaque_with_baby_-_%28Harmony_of_Life%29.jpg)
+![macaco 2]
+(https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Female_Toque_macaque_with_baby_-_%28Harmony_of_Life%29.jpg/1920px-Female_Toque_macaque_with_baby_-_%28Harmony_of_Life%29.jpg)
 
 ---
 ## Requisitos
