@@ -47,11 +47,12 @@ El análisis se automatiza mediante el script `run_filogenia.sh`, con los siguie
   - `edirect`
 
 ---
-##Autor
+## Requisitos
 
--Valentina Champutiz
--Estudiante de [Bioinformática - PUCE]
--Contacto: pvchamputiz@puce.edu.ec
+- Valentina Champutiz
+- Estudiante de [Bioinformática - PUCE]
+- Contacto: pvchamputiz@puce.edu.ec
+   
 
 ---
 Agradecimientos
