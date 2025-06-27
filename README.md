@@ -8,9 +8,11 @@ Universidad Católica del Ecuador
 Este proyecto construye un árbol filogenético a partir de secuencias mitocondriales completas de diversas especies del género *Macaca* (primates asiáticos), y las compara con especies representativas de Australasia. El objetivo es explorar si la distribución geográfica marcada por la Línea de Wallace está asociada con una divergencia evolutiva observable a nivel genético.
 
 La Línea de Wallace representa una frontera biogeográfica histórica que separa la fauna de Asia de la de Australasia. Esta barrera ha sido objeto de múltiples estudios evolutivos. En este caso, se utiliza ADN mitocondrial disponible públicamente para evaluar su efecto sobre mamíferos terrestres.
-![Macacos] (https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1sUsLYhXPqmD-vKuX9SPzOyk047FsjDI24w&s)
+
+![MACACO1](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Macaca_sinica_-_01.jpg/1024px-Macaca_sinica_-_01.jpg)
 
 ---
+
 ## Flujo de Trabajo del Programa
 
 El análisis se automatiza mediante el script `run_filogenia.sh`, con los siguientes pasos:
@@ -32,7 +34,7 @@ El análisis se automatiza mediante el script `run_filogenia.sh`, con los siguie
 
 6. **Visualización**  
    El árbol se visualiza en FigTree.
-![macaco 2] (https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaOpDLjw9pecZfJHacyRZoufOvFfz538QkEQ&s)
+![macaco 2] (https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Female_Toque_macaque_with_baby_-_%28Harmony_of_Life%29.jpg/1920px-Female_Toque_macaque_with_baby_-_%28Harmony_of_Life%29.jpg)
 
 ---
 ## Requisitos
