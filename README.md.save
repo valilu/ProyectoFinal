@@ -1,0 +1,68 @@
+
+# Filogenia de Macacos y la Línea de Wallace
+
+## Autora  
+Valentina Champutiz  
+Proyecto Final – Bioinformática  
+Universidad Católica del Ecuador
+
+---
+
+## Descripción del proyecto
+
+Este proyecto explora cómo la Línea de Wallace, una frontera biogeográfica entre Asia y Australasia, ha influido en la evolución de mamíferos terrestres. Se analiza la filogenia del género *Macaca* y se compara con especies endémicas del lado australasiático, como el casuario y el cuscús. La hipótesis central es que esta barrera geográfica ha promovido una divergencia evolutiva observable en los genomas mitocondriales.
+
+### Requisitos
+
+- Sistema operativo: Linux o macOS
+- Acceso a terminal bash
+- Herramientas instaladas:
+
+1. Descarga el script principal:
+
+
+
+
+2.
+   
+   - Descarga de genomas mitocondriales desde GenBank
+   - Alineamiento con MUSCLE
+   - Inferencia filogenética con IQ-TREE
+
+---
+
+## Resultados
+
+Los archivos generados se almacenan en:
+
+```
+filogenia_wallace/secuencias/
+```
+
+Puedes visualizar el archivo `.treefile`:
+
+- [FigTree](http://tree.bio.ed.ac.uk/software/figtree/)
+
+---
+
+## Herramientas utilizadas
+
+- [MUSCLE](https://www.drive5.com/muscle/) – Alineamiento múltiple de secuencias
+- [IQ-TREE](http://www.iqtree.org/) – Inferencia filogenética
+- [Entrez Direct (EDirect)](https://www.ncbi.nlm.nih.gov/books/NBK179288/) – Descarga de secuencias desde NCBI
+
+---
+
+## Agradecimientos
+
+- A la comunidad científica que comparte datos en GenBank  
+- A los desarrolladores de herramientas bioinformáticas  
+
+
+
+
+
+
+
+
+
