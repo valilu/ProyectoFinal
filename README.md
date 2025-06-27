@@ -47,7 +47,7 @@ El análisis se automatiza mediante el script `run_filogenia.sh`, con los siguie
   - `edirect`
 
 ---
-Autor
+##Autor
 
 -Valentina Champutiz
 -Estudiante de [Bioinformática - PUCE]
