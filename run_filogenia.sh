@@ -1,27 +1,38 @@
+#!/bin/bash
 # Proyecto: Filogenia de Macacos y la Línea de Wallace
 # Autora: Valentina Champutiz
+
+# Cargar módulos necesarios
+module load iqtree/2.2.2.6
 
 # Crear carpetas si no existen
 mkdir -p data results
 
-echo "descargando secuencias de GenBank..."
-# Descargar secuencias mitocondriales completas
-esearch -db nucleotide -query "Macaca[Organism] AND mitochondrion[Title] AND complete genome" | efetch -format fasta > data/macaca.fasta
-esearch -db nucleotide -query "Casuarius casuarius[Organism] AND mitochondrion[Title] AND complete genome" | efetch -format fasta > data/casuarius.fasta
-esearch -db nucleotide -query "Phalanger orientalis[Organism] AND mitochondrion[Title] AND complete genome" | efetch -format fasta > data/phalanger.fasta
-esearch -db nucleotide -query "Dendrolagus matschiei[Organism] AND mitochondrion[Title] AND complete genome" | efetch -format fasta > data/dendrolagus.fasta
+echo "Descargando secuencias de GenBank..."
+esearch -db nucleotide -query "Macaca[Organism] AND COX1[Gene] AND mitochondrion[Filter]" | efetch -format fasta | head -100 > data/macaca.fasta
+esearch -db nucleotide -query "Casuarius casuarius[Organism] AND COX1[Gene] AND mitochondrion[Filter]" | efetch -format fasta | head -100 > data/casuarius.fasta
+esearch -db nucleotide -query "Phalanger orientalis[Organism] AND COX1[Gene] AND mitochondrion[Filter]" | efetch -format fasta | head -100 > data/phalanger.fasta
+esearch -db nucleotide -query "Dendrolagus matschiei[Organism] AND COX1[Gene] AND mitochondrion[Filter]" | efetch -format fasta | head -100 > data/dendrolagus.fasta
 
 echo "Concatenando secuencias..."
-#concatenar secuencias
-rm -f data/secuencias.fasta  #eliminar antes el archivo si existe
-cat data/*.fasta > data/secuencias.fasta
-echo "intercalando secuencias con MUSCLE..."
+cat data/macaca.fasta data/casuarius.fasta data/phalanger.fasta data/dendrolagus.fasta > data/secuencias.fasta
 
-#Alinear secuancias con MAFFT
-mafft --auto --adjustdirection data/secuencias.fasta > results/alineadas.fasta
+echo "Verificando secuencias descargadas..."
+seq_count=$(grep -c "^>" data/secuencias.fasta)
+echo "Total de secuencias: $seq_count"
 
-echo "construyendo árbol filogenético con IQ-TREE..."
-#Construir árbol filogenético
-/u/local/apps/iqtree/1.6.12/bin/iqtree -s results/alineadas.fasta -m MFP -bb 1000 -alrt 1000 -nt AUTO -pre results/arbol_mfp
+if [ $seq_count -eq 0 ]; then
+    echo "Error: No se descargaron secuencias"
+    exit 1
+fi
+
+echo "Alineando secuencias con MUSCLE..."
+SCRIPTS/muscle3.8.31_i86linux64 -in data/secuencias.fasta -out results/alineadas.fasta
+
+echo "Construyendo árbol filogenético con IQ-TREE..."
+iqtree -s results/alineadas.fasta -m MFP -nt AUTO -pre results/arbol_mfp
 
 echo "¡Análisis completo! Revisa los resultados en la carpeta 'results/'"
+echo "Archivos importantes:"
+echo "  - results/arbol_mfp.treefile (archivo del árbol)"
+echo "  - results/arbol_mfp.iqtree (estadísticas del análisis)"
