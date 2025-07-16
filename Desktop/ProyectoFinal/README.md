@@ -35,7 +35,18 @@ El análisis se automatiza mediante el script `run_filogenia.sh`, con los siguie
 6. **Visualización**  
    El árbol se visualiza en FigTree.
 ![macaco 2](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Female_Toque_macaque_with_baby_-_%28Harmony_of_Life%29.jpg/1920px-Female_Toque_macaque_with_baby_-_%28Harmony_of_Life%29.jpg)
+![Filogenia](results/filogenia.final.2.png)
 
+Interpretación del Árbol Filogenético
+El árbol filogenético fue generado a partir de secuencias del gen mitocondrial cox1 (citocromo c oxidasa subunidad I), un marcador comúnmente utilizado en estudios de filogenia molecular y delimitación de especies. Las secuencias utilizadas corresponden a un conjunto de especies seleccionadas de Asia y Australasia, con el objetivo de evaluar si existe una divergencia genética asociada con la Línea de Wallace, una reconocida barrera biogeográfica entre ambas regiones.
+
+Principales inferencias:
+
+Macaca munzala (placentario asiático) se agrupa de forma claramente separada respecto a los taxones australasianos, lo que concuerda con su divergencia esperada como mamífero euterio y respalda la hipótesis de aislamiento evolutivo entre Asia y Australasia.
+Dendrolagus goodfellowi y Phalanger orientalis, ambos marsupiales australasianos, forman un clado bien definido, reflejando su historia evolutiva compartida dentro del linaje de los metaterios.
+Las aves Casuarius casuarius y Gallus gallus se agrupan en un clado externo, basal respecto a los mamíferos, lo que refleja su divergencia temprana en la evolución de los amniotas.
+Las distancias filogenéticas observadas (longitudes de rama) son consistentes con divergencias profundas entre los linajes separados geográficamente por la Línea de Wallace.
+En conjunto, estos resultados sustentan que la Línea de Wallace no solo constituye una barrera geográfica, sino también una discontinuidad evolutiva detectable a nivel molecular, incluso cuando se utilizan fragmentos individuales como COX1
 ---
 ## Requisitos
 
@@ -55,7 +66,6 @@ El análisis se automatiza mediante el script `run_filogenia.sh`, con los siguie
    
 
 ---
-Agradecimientos
 
 
 ---
